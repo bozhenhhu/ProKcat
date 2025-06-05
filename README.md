@@ -10,6 +10,10 @@ This new release includes:
 An updated metabolic pathway map featuring five new pathways: Glutathione-mediated detoxification, Curcuminoid biosynthesis, Monoterpenoid biosynthesis, Tropane alkaloid biosynthesis, Secologanin biosynthesis.
 You can download the updated data in JSON and TXT formats [[here]](https://www.brenda-enzymes.org/download.php).
 
+## Training
+1. Data preparation: refer to [[DLTKcat]](https://github.com/SizheQiu/DLTKcat).
+2. Get SMILES strings and enzyme protein sequences features using code/feature_functions.py.
+
 ## Dependency
 Pytorch (1.8.1+cu101)
 
