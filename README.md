@@ -2,19 +2,27 @@
 Multimodal Regression for Enzyme Turnover Rates Prediction
 This paper has been published in [[IJCAI 2025]](https://2025.ijcai.org/). This is the code.
 
+![img](./model.png)
+
 ## Data
 BRENDA Release 2025.1 is now online.
 This new release includes:
 168 new EC Classes and 1620 updated EC Classes
 6,857 new primary literature references
 An updated metabolic pathway map featuring five new pathways: Glutathione-mediated detoxification, Curcuminoid biosynthesis, Monoterpenoid biosynthesis, Tropane alkaloid biosynthesis, Secologanin biosynthesis.
-You can download the updated data in JSON and TXT formats [[here]](https://www.brenda-enzymes.org/download.php).
+Suggesting download the updated data in JSON and TXT formats [[here]](https://www.brenda-enzymes.org/download.php). 
 
-## Training
-1. Data preparation: refer to [[DLTKcat]](https://github.com/SizheQiu/DLTKcat).
-2. Get SMILES strings and enzyme protein sequences features using code/feature_functions.py.
+## File Specification 
+1. Data preparation: GetData.ipynb.from [[DLTKcat]](https://github.com/SizheQiu/DLTKcat).
+2. Get SMILES strings and enzyme protein sequences features using code/gen_features.py, which will generate features using code/feature_functions.py.
+3. run_esm_Kcat_finetune.ipynb and run_esm_Kcat_finetune.py is used to train and finetune esm. It may not be a good choice.
+4. run_esm_Kcat.ipynb using protein esm embeddings and compound features, etc to predict Kcat.
+5. run_train_test.ipynb, run KAN experiments on finetuned models.
+6. Models in run_train_test.ipynb and run_esm_Kcat.ipynb can be merged to predict Kcat.
 
-## Dependency
+The KAN models or AI models' interpretability for science still have a long way to go.
+
+## Main Dependency
 Pytorch (1.8.1+cu101)
 
 Scikit-learn
@@ -25,9 +33,7 @@ RDKit
 
 BRENDApyrser
 
-...
-
-refer to the requirements.txt
+KAN
 
 
 ## Thanks
