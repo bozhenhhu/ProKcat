@@ -2,7 +2,7 @@
 Multimodal Regression for Enzyme Turnover Rates Prediction
 This paper has been published in [[IJCAI 2025]](https://2025.ijcai.org/). This is the code.
 
-![img](./.png)
+![img](./model.png)
 
 ## Data
 BRENDA Release 2025.1 is now online.
